@@ -1,0 +1,18 @@
+# ============================================================================
+# dsh-permission-alert —— DSH bundle patch（挂载声明）
+# ============================================================================
+# 这是插件的"挂载声明"。DSH 启动时按 bundle 层栈叠加各插件的 patch，
+# 本文件把 dsh-permission-alert 插入 Web profile 的插件树。
+#
+# 安装方式（与 dsh-whale-widget 完全一致）：
+#   dsh plugin --profile web add link:<本目录绝对路径>     # 本地开发
+#   dsh plugin --profile web add dsh-permission-alert      # 发布到 npm 后
+#
+# 配置项在代码里有默认值；如需按 profile 覆盖，编辑
+# %USERPROFILE%\.dsh\profiles\web\cordis.patch.yml，追加一段 id-targeted
+# 覆盖（见 README「配置」一节）。
+# ============================================================================
+
+- insert:
+    - id: dsh-permission-alert
+      name: dsh-permission-alert
