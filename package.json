@@ -1,0 +1,37 @@
+{
+  "name": "dsh-permission-alert",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness 权限确认响铃提醒插件：当 Agent 的工具调用需要用户批准（沙箱权限不足以执行等）而 DSH 正在等待确认时，用系统提示音反复提醒，避免确认请求被错过导致流程卡顿。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "permission",
+    "approval",
+    "sandbox",
+    "alert",
+    "beep",
+    "sound"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.6.0"
+  },
+  "license": "MIT"
+}
